@@ -1,5 +1,5 @@
 <html>
-    <title>BONA4</title>
+    <title>BONA5</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -9,12 +9,16 @@
     <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <a-asset-item id="hatModel" src="cowboy_hat_free/scene.gltf"></a-asset-item>
+        <a-asset-item id="mask" src="green_arrow_eye_mask/scene.gltf"></a-asset-item>
     </a-assets>
 
 
       <a-camera active="false" position="0 0 0"></a-camera>
       <a-entity mindar-face-target="anchorIndex: 10">
         <a-gltf-model rotation="0 -0 0" position="0 0.1 -0.5" scale="0.05 0.05 0.05" src="#hatModel" visible="true"></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 195">
+        <a-gltf-model rotation="0 -0 0" position="0 0.1 -0.5" scale="0.05 0.05 0.05" src="#mask" visible="true"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
