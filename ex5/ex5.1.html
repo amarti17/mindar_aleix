@@ -22,7 +22,12 @@
         <a-box position="-16 3 0" rotation="0 0 50"  src="#vitor" depth="4" height="4" width="4"></a-box>
         <a-box position="-16 3 13" rotation="0 0 50"  src="#aleix" depth="4" height="4" width="4"></a-box>
         <a-plane position="-4 3 13" rotation="0 0 0" width="5" height="5" src="#barça"></a-plane>
-        <a-sphere position="-10 10 6" src="#senyera" radius="5" color="#ff0"></a-sphere>
+        <a-sphere position="-10 15 6" src="#senyera" radius="5" color="#ff0" animation="
+        property: scale;
+        from: 1 1 1;
+        to: 2 2 2;
+        easing: easeInOutElastic;
+        loop: true"></a-sphere>
         </a-scene>
 
         <script>
