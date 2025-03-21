@@ -41,6 +41,21 @@
                 ? sphere.removeAttribute("animation")
                 : sphere.setAttribute("animation", "property: scale; from: 1 1 1; to: 2 2 2; easing: easeInOutElastic; loop: true");
         });
+
+        
+      const box3 = document.querySelector("#box3");
+
+      
+      setInterval(function () {
+        let currentPosition = box3.getAttribute('position');
+        
+        
+        currentPosition.y += 0.1; // Mover hacia arriba
+
+        
+        box3.setAttribute('position', currentPosition);
+      }, 1000);  
+
     </script>
   </body>
 </html>
