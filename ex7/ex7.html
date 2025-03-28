@@ -9,6 +9,14 @@
           <img id="i01" src="imatges/01.jpg">
           <img id="i02" src="imatges/02.jpg">
           <img id="i03" src="imatges/03.jpg">
+          <img id="i04" src="imatges/04.jpg">
+          <img id="i05" src="imatges/05.jpg">
+          <img id="i06" src="imatges/06.jpg">
+          <img id="i07" src="imatges/07.jpg">
+          <img id="i08" src="imatges/08.jpg">
+          <img id="i09" src="imatges/09.jpg">
+          <img id="i10" src="imatges/10.jpg">
+          <img id="ilogo" src="imatges/logo1.jpg">
           <!--imatge del botó de entrada-->  
           <img id="imgEntrada" src="entragroc.png" >
           <!-- Audios -->
@@ -56,14 +64,22 @@
       function controlImatges(){
           // Ha d'anar acompanyat amb la música
           segons=segons+1;
-          if (segons ==2)  sky.setAttribute('src', '#i02');    
-          if (segons ==10)  sky.setAttribute('src', '#i03');
+          if (segons ==2)  sky.setAttribute('src', '#i02');
+          if (segons ==10)  sky.setAttribute('src', '#i03');   
+          if (segons ==15)  sky.setAttribute('src', '#i05');
+          if (segons ==20)  sky.setAttribute('src', '#i06');
+          if (segons ==25)  sky.setAttribute('src', '#i07');
+          if (segons ==30)  sky.setAttribute('src', '#i04');
+          if (segons ==35)  sky.setAttribute('src', '#i08');
+          if (segons ==40)  sky.setAttribute('src', '#i09');
+          if (segons ==45)  sky.setAttribute('src', '#i10');
+          if (segons ==50)  sky.setAttribute('src', '#ilogo');
          
           // Quan acaba la música torna a la imatge inicial
           // Ha d'anar sincronitzat amb la música que escolliu
           // Tota l'animació hauria de durar uns 90 segons
           // el valor de 30 s'ha de canviar pel del final de la música
-          if (segons==30) {
+          if (segons==1000) {
             segons=0;
             //para el rellotge
             clearInterval(idInterval);
