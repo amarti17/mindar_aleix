@@ -21,6 +21,7 @@
       <img id="endevinalla" src="fotos/endevinalla3.png" >
       <img id="final" src="fotos/final.png" >
       <img id="meta" src="fotos/metafinal.png" >
+      <a-asset-item id="pc" src="fotos/laptop/scene.gltf"></a-asset-item>
     </a-assets>
    
     <a-entity camera look-controls wasd-controls="false">
@@ -37,9 +38,11 @@
      </a-entity>
     </a-entity>
       <a-sky src="#final"></a-sky>
+      <a-entity gltf-model="#pc" position="0 -3.5 -2.5" scale="0.02 0.02 0.02">     
+      </a-entity>
       <a-sphere position="0 15 -60" src="#meta" animation="property: rotation; dur: 10000; to: 0 360 0; loop: true" radius="16" rotation="0 30 0"  transparent="true"></a-sphere>
-      <a-text value="HAS SUPERAT L'SCAPE ROOM DE L'INSTITUT." 
-              position="-35 -8 -40"
+      <a-text value="HAS SUPERAT L'SCAPE ROOM DE L'INSTITUT, HAS EVITAT QUE LES DADES ES PERDIN PER SEMPRE!." 
+              position="-40 -8 -40"
               rotation="0 0 0"
               color="white"
               width="80"></a-text>
