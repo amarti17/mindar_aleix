@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent("mylink", {
+        init: function() {  
+         this.el.addEventListener("click", (e) => {              
+            window.location = this.data.href;      
+           })
+        }
+      })
+    </script>
+
+
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-assets>
+      <img id="fons" src="fotos/6.JPG">
+      <img id="entrar" src="fotos/entrar.png" >
+    </a-assets>
+   
+    <a-entity camera look-controls wasd-controls="false">
+     <a-entity cursor="fuse: true; fuseTimeout: 2000"
+           position="0 0 -1"
+           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+           material="color: red; shader: flat"
+           animation="property: components.material.material.color;
+                 type: color;
+                 to: white;
+                 dur: 1000;
+                 dir: alternate;
+                 loop: true">
+     </a-entity>
+    </a-entity>
+      <a-sky src="#fons"></a-sky>
+      <a-plane position="-1.5 -1 -8" src="#entrar" rotation="0 5 0"  transparent="true" mylink="https://amarti17.github.io/mindar_aleix/ex8/5.html"></a-plane>
+      <a-text value="Entra dins de 
+      l'aula per a poder 
+      encertar la 
+      ultima pregunta" 
+              position="-3.5 2 -9"
+              color="black"
+              width="12"></a-text>
+    </a-scene>
+  </body>
+</html>

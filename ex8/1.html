@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
+    <script>
+        AFRAME.registerComponent("mylink", {
+        init: function() {  
+         this.el.addEventListener("click", (e) => {              
+            window.location = this.data.href;      
+           })
+        }
+      })
+    </script>
+
+
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-assets>
+      <img id="fons" src="fotos/1.JPG" >
+      <img id="entrarjoc" src="fotos/entragroc.png" >
+      <img id="historia" src="fotos/historia.png" >
+      <img id="ins" src="fotos/ins.jpg" >
+      <img id="cpu" src="fotos/cpu.jpg" >
+      <img id="upc" src="fotos/upc.jpeg" >
+    </a-assets>
+   
+    <a-entity camera look-controls wasd-controls="false">
+     <a-entity cursor="fuse: true; fuseTimeout: 2000"
+           position="0 0 -1"
+           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+           material="color: red; shader: flat"
+           animation="property: components.material.material.color;
+                 type: color;
+                 to: white;
+                 dur: 1000;
+                 dir: alternate;
+                 loop: true">
+     </a-entity>
+    </a-entity>
+      <a-sky src="#fons"></a-sky>
+      <a-plane question="32" position="3.5 0 -8" src="#entrarjoc" rotation="0 5 0"  transparent="true"></a-plane>
+      <a-plane position="-10 0 -12" src="#historia" width="13" height="8" rotation="0 30 0"  transparent="true"></a-plane>
+      <a-box position="50 1 -18" src="#ins" animation="property: rotation; dur: 10000; to: 0 360 0; loop: true" depth="15" width="15" height="15" rotation="0 30 0"  transparent="true"></a-box>
+      <a-box question="35" position="-3 -8 -30" src="#cpu" depth="2" width="2" height="2" rotation="0 30 0"  transparent="true"></a-box>
+      <a-box question="34" position="65 -8 -40" src="#upc" depth="2" width="2" height="2" rotation="0 30 0"  transparent="true"></a-box>
+      <a-text value="Entra a l'institut i inicia." 
+              position="1.2 1 -8"
+              color="white"
+              width="10"></a-text>
+    </a-scene>
+  </body>
+</html>
