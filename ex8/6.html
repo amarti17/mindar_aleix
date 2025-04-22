@@ -22,7 +22,10 @@
       <img id="final" src="fotos/final.png" >
       <img id="meta" src="fotos/metafinal.png" >
       <a-asset-item id="pc" src="fotos/laptop/scene.gltf"></a-asset-item>
+      <audio id="musica" src="fotos/musica.mp3"></audio>
     </a-assets>
+
+    <a-entity id="sound" sound="src: #musica"></a-entity>
    
     <a-entity camera look-controls wasd-controls="false">
      <a-entity cursor="fuse: true; fuseTimeout: 2000"

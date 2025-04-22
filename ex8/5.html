@@ -22,7 +22,10 @@
       <img id="pista1" src="fotos/pista3.png" >
       <img id="pista2" src="fotos/pista3-3.png" >
       <a-asset-item id="aula" src="fotos/japanese_classroom/scene.gltf"></a-asset-item>
+      <audio id="musica" src="fotos/musica.mp3"></audio>
     </a-assets>
+
+    <a-entity id="sound" sound="src: #musica"></a-entity>
    
     <a-entity camera look-controls wasd-controls="acceleration: 0.5">
      <a-entity cursor="fuse: true; fuseTimeout: 2000"
