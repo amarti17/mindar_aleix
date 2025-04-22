@@ -13,6 +13,15 @@
       })
     </script>
 
+    <script>
+      // Activar audio en primer clic
+      window.addEventListener("click", () => {
+        const soundEntity = document.querySelector("#sound");
+        if (soundEntity.components.sound && !soundEntity.components.sound.isPlaying) {
+          soundEntity.components.sound.playSound();
+        }
+      });
+    </script>
 
   </head>
   <body>
